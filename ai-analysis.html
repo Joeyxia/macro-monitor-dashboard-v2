@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRouter AI分析 - 14维宏观监控</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>14维宏观监控仪表盘</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">仪表盘</a></li>
+                <li><a href="reports/">日报</a></li>
+                <li><a href="glossary.html">术语解释</a></li>
+                <li><a href="data-dashboard.html">数据看板</a></li>
+                <li><a href="#ai-analysis" class="active">AI分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- AI分析主区域 -->
+    <main class="dashboard">
+        <section class="ai-header">
+            <h2>🤖 OpenRouter AI分析</h2>
+            <p>AI使用趋势与宏观经济影响评估 (D13维度: AI资本开支周期)</p>
+        </section>
+
+        <!-- AI市场概览 -->
+        <section class="ai-overview">
+            <h3>AI市场概览</h3>
+            <div class="overview-cards">
+                <div class="overview-card">
+                    <h4>月度Token消耗</h4>
+                    <p class="number">30T tokens</p>
+                    <p class="change positive">+9.1% MoM</p>
+                </div>
+                <div class="overview-card">
+                    <h4>主要模型竞争</h4>
+                    <p class="number">Top 3 Models</p>
+                    <p class="detail">Claude Opus, Trinity Large, Gemini Pro</p>
+                </div>
+                <div class="overview-card">
+                    <h4>D13维度评分</h4>
+                    <p class="number">61/100</p>
+                    <p class="detail">AI资本开支周期</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token消耗趋势图 -->
+        <section class="chart-section">
+            <h3>OpenRouter Token消耗趋势</h3>
+            <div class="chart-container">
+                <canvas id="tokenTrendChart"></canvas>
+            </div>
+        </section>
+
+        <!-- 模型竞争格局 -->
+        <section class="model-competition">
+            <h3>模型竞争格局分析</h3>
+            <div class="competition-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模型名称</th>
+                            <th>周Token消耗</th>
+                            <th>周趋势变化</th>
+                            <th>市场份额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Claude Opus 4.6</td>
+                            <td>615.5B tokens</td>
+                            <td class="trend negative">-12.36%</td>
+                            <td>45.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Trinity Large Preview</td>
+                            <td>519.5B tokens</td>
+                            <td class="trend positive">+2.76%</td>
+                            <td>38.1%</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini 3 Pro Preview</td>
+                            <td>123.0B tokens</td>
+                            <td class="trend negative">-33.72%</td>
+                            <td>9.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="note">
+                <p><strong>注：</strong>数据为趋势指标，非全球总量。基于行业基准估算。</p>
+            </div>
+        </section>
+
+        <!-- AI对宏观经济的影响 -->
+        <section class="macro-impact">
+            <h3>AI发展对宏观经济的影响 (D13维度)</h3>
+            <div class="impact-analysis">
+                <div class="impact-item">
+                    <h4>生产力提升</h4>
+                    <p>AI技术正在显著提升各行业的生产力效率，预计对GDP增长产生正面贡献。</p>
+                </div>
+                <div class="impact-item">
+                    <h4>就业结构变化</h4>
+                    <p>自动化和AI正在改变就业市场结构，高技能岗位需求增加，低技能岗位面临替代风险。</p>
+                </div>
+                <div class="impact-item">
+                    <h4>投资模式转变</h4>
+                    <p>资本正大量流向AI基础设施和相关技术，改变了传统的投资组合配置。</p>
+                </div>
+                <div class="impact-item">
+                    <h4>通胀影响</h4>
+                    <p>AI驱动的效率提升可能对通胀产生下行压力，但AI基础设施投资可能带来短期通胀压力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- D13维度在14维模型中的应用 -->
+        <section class="model-integration">
+            <h3>D13维度在14维模型中的整合</h3>
+            <div class="integration-details">
+                <p><strong>AI资本开支周期 (D13, 权重4%)</strong> 作为重要的前瞻性指标整合到14维宏观监控模型中，主要体现在：</p>
+                <ul>
+                    <li><strong>D02 增长与前瞻维度：</strong>AI投资和采用率作为经济增长的领先指标</li>
+                    <li><strong>D05 企业盈利与信用维度：</strong>AI相关企业的估值和盈利能力分析</li>
+                    <li><strong>D12 信心与不确定性维度：</strong>AI发展对商业信心和消费者预期的影响</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- D14维度 - 加密与稳定币流动性 -->
+        <section class="crypto-analysis">
+            <h3>D14维度: 加密与稳定币流动性 (权重1%)</h3>
+            <div class="crypto-metrics">
+                <div class="crypto-card">
+                    <h4>BTC价格</h4>
+                    <p class="number">$67,371.90</p>
+                    <p class="detail">稳定币市值: $75.3B</p>
+                </div>
+                <div class="crypto-card">
+                    <h4>链上流动性</h4>
+                    <p class="number">健康</p>
+                    <p class="detail">USDC流通量稳定增长</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据源和方法论 -->
+        <section class="methodology">
+            <h3>数据源和方法论</h3>
+            <div class="methodology-content">
+                <p><strong>数据来源：</strong>OpenRouter平台API、行业报告、公开财报数据</p>
+                <p><strong>更新频率：</strong>月度数据（每月初更新上月数据）</p>
+                <p><strong>透明度：</strong>所有AI相关指标均明确标注为趋势性指标，不作为绝对数值参考</p>
+                <p><strong>局限性：</strong>数据覆盖范围有限，主要反映特定平台和用户群体的使用情况</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 14维宏观监控系统 | 基于机构级宏观监控模型</p>
+            <p>数据来源: OpenRouter, 行业报告, 公开财报</p>
+        </div>
+    </footer>
+
+    <script src="ai-analysis.js"></script>
+</body>
+</html>
