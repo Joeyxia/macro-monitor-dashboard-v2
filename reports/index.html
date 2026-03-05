@@ -7,89 +7,55 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- 头部 -->
-    <header class="header">
-        <div class="container">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
+                <span class="version">v2 · 14维机构级模型</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">仪表盘</a></li>
+                <li><a href="#reports" class="active">日报</a></li>
+                <li><a href="../glossary.html">术语解释</a></li>
+                <li><a href="../data-dashboard.html">数据看板</a></li>
+                <li><a href="../alerts.html">预警信号</a></li>
+                <li><a href="../ai-analysis.html">AI分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 报告列表主区域 -->
+    <main class="dashboard">
+        <section class="reports-header">
             <h1>📊 市场报告</h1>
             <p>基于14维宏观经济模型的每日市场分析</p>
-        </div>
-    </header>
+            <div class="info-box">
+                <strong>📈 报告更新时间：</strong>工作日 09:00 (中国时间) & 22:00 (北京时间)<br>
+                <strong>🔍 数据来源：</strong>FRED, BEA, BLS, NY Fed, Conference Board等官方机构
+            </div>
+        </section>
 
-    <!-- 主容器 -->
-    <main class="container">
-        <!-- 信息框 -->
-        <div class="info-box">
-            <strong>📈 报告更新时间：</strong>工作日 09:00 (中国时间) & 22:00 (北京时间)<br>
-            <strong>🔍 数据来源：</strong>美国财政部、BLS、美联储等官方机构
-        </div>
-
-        <!-- 最新报告列表 -->
+        <!-- 报告列表 -->
         <section class="report-list">
             <h2>📅 最新报告</h2>
-            
             <div class="report-item">
                 <div class="report-item-content">
                     <div class="report-date">2026-03-05</div>
                     <span class="score-badge">综合评分: 58.6/100</span>
                     <span class="signal-badge">投资信号: 中性偏多</span>
                 </div>
-                <a href="2026-03-05.html" class="report-link">查看报告</a>
+                <a href="2026-03-05.html" class="report-link">查看报告 →</a>
             </div>
-            
-            <div class="report-item">
-                <div class="report-item-content">
-                    <div class="report-date">2026-03-04</div>
-                    <span class="score-badge">综合评分: 58.3/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="#" class="report-link">查看报告</a>
-            </div>
-            
-            <div class="report-item">
-                <div class="report-item-content">
-                    <div class="report-date">2026-03-03</div>
-                    <span class="score-badge">综合评分: 57.9/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="#" class="report-link">查看报告</a>
-            </div>
-            
-            <div class="report-item">
-                <div class="report-item-content">
-                    <div class="report-date">2026-03-02</div>
-                    <span class="score-badge">综合评分: 56.5/100</span>
-                    <span class="signal-badge">投资信号: 中性偏谨慎</span>
-                </div>
-                <a href="#" class="report-link">查看报告</a>
-            </div>
+            <!-- 更多报告项可以在这里添加 -->
         </section>
-
-        <!-- 其他功能链接 -->
-        <div class="feature-links">
-            <div class="feature-card">
-                <h3>📚 专业术语解释</h3>
-                <p>市场报告术语指南<br>SOFR、ERP、MOVE、TGA余额、日元套利交易等专业概念详解</p>
-                <a href="../glossary.html" class="feature-link">查看术语解释</a>
-            </div>
-            
-            <div class="feature-card">
-                <h3>📊 数据看板</h3>
-                <p>市场报告 & OpenViking记忆系统<br>实时数据统计和趋势分析</p>
-                <a href="../data-dashboard.html" class="feature-link">查看数据看板</a>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🤖 OpenRouter AI分析</h3>
-                <p>AI模型采用趋势分析<br>基于OpenRouter平台的AI Adoption深度洞察</p>
-                <a href="../ai-analysis.html" class="feature-link">查看AI分析</a>
-            </div>
-        </div>
     </main>
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 市场报告 | 每日更新 | 基于14维宏观经济模型</p>
+        <div class="footer-content">
+            <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
+            <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
     </footer>
 </body>
