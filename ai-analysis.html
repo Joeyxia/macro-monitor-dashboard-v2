@@ -7,117 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 头部 -->
-    <header class="header">
-        <div class="container">
-            <h1>🤖 OpenRouter AI分析</h1>
-            <p>基于OpenRouter平台的AI Adoption深度洞察与模型采用趋势分析</p>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
+                <span class="version">v2 · 14维机构级模型</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">仪表盘</a></li>
+                <li><a href="reports/">日报</a></li>
+                <li><a href="glossary.html">术语解释</a></li>
+                <li><a href="data-dashboard.html">数据看板</a></li>
+                <li><a href="alerts.html">预警信号</a></li>
+                <li><a href="#ai-analysis" class="active">AI分析</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- 主容器 -->
-    <main class="container">
-        <!-- AI分析概览 -->
-        <section class="ai-overview">
-            <h2 class="section-title">AI模型采用趋势分析</h2>
-            <div class="info-box">
-                <p>本分析基于OpenRouter平台的真实使用数据，追踪各类AI模型在投资决策中的采用趋势。数据显示，GPT-5.2和Claude 4 Sonnet在金融分析领域占据主导地位，而开源模型的采用率正在快速增长。</p>
-            </div>
+    <!-- AI分析主区域 -->
+    <main class="dashboard">
+        <section class="ai-analysis-header">
+            <h2>🤖 OpenRouter AI分析</h2>
+            <p>基于OpenRouter平台的AI Adoption深度洞察与市场趋势分析</p>
         </section>
 
-        <!-- 模型采用分布 -->
-        <section class="model-distribution">
-            <h2 class="section-title">主流AI模型采用分布</h2>
-            <div class="model-cards">
-                <div class="model-card">
-                    <div class="model-header">
-                        <h3>GPT-5.2</h3>
-                        <span class="market-share">42%</span>
-                    </div>
-                    <p class="model-description">OpenAI最新旗舰模型，在复杂金融分析和多维度推理方面表现卓越。</p>
-                    <div class="model-stats">
-                        <span class="stat-item">准确率: 94.2%</span>
-                        <span class="stat-item">响应速度: 1.8s</span>
-                    </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-header">
-                        <h3>Claude 4 Sonnet</h3>
-                        <span class="market-share">28%</span>
-                    </div>
-                    <p class="model-description">Anthropic的平衡型模型，在长文本理解和经济政策分析方面具有优势。</p>
-                    <div class="model-stats">
-                        <span class="stat-item">准确率: 91.7%</span>
-                        <span class="stat-item">响应速度: 2.1s</span>
-                    </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-header">
-                        <h3>Llama 4 70B</h3>
-                        <span class="market-share">18%</span>
-                    </div>
-                    <p class="model-description">Meta开源旗舰模型，成本效益高，在基础市场分析中表现稳定。</p>
-                    <div class="model-stats">
-                        <span class="stat-item">准确率: 87.3%</span>
-                        <span class="stat-item">响应速度: 1.5s</span>
-                    </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-header">
-                        <h3>Qwen3 Max</h3>
-                        <span class="market-share">12%</span>
-                    </div>
-                    <p class="model-description">阿里云最新模型，在中文市场分析和亚洲经济指标解读方面具有独特优势。</p>
-                    <div class="model-stats">
-                        <span class="stat-item">准确率: 89.1%</span>
-                        <span class="stat-item">响应速度: 1.6s</span>
-                    </div>
-                </div>
+        <section class="ai-analysis-content">
+            <div class="analysis-section">
+                <h3>📊 AI模型采用趋势分析</h3>
+                <p>当前AI模型采用呈现加速态势，特别是在金融和投资领域。OpenRouter平台数据显示，GPT-5.2和Qwen3 Max等高级模型的使用频率显著提升。</p>
+                
+                <ul class="analysis-list">
+                    <li>📈 <strong>模型性能对比</strong>: GPT-5.2在复杂金融分析任务中表现最优，Qwen3 Max在中文语境下具有优势</li>
+                    <li>💰 <strong>成本效益分析</strong>: GPT-3.5 Turbo仍是最具性价比的选择，适合日常监控任务</li>
+                    <li>⚡ <strong>响应速度优化</strong>: 新的推理优化技术显著提升了模型响应速度</li>
+                </ul>
             </div>
-        </section>
 
-        <!-- 趋势分析 -->
-        <section class="trend-analysis">
-            <h2 class="section-title">采用趋势变化</h2>
-            <div class="trend-cards">
-                <div class="trend-card positive">
-                    <h3>📈 开源模型增长</h3>
-                    <p>过去6个月，开源模型采用率增长了34%，主要受益于成本优势和本地部署能力。</p>
-                </div>
-                <div class="trend-card warning">
-                    <h3>🔄 模型切换频率</h3>
-                    <p>用户平均每月切换2.3次AI模型，表明市场仍在探索最适合的工具组合。</p>
-                </div>
-                <div class="trend-card opportunity">
-                    <h3>💡 专业领域定制</h3>
-                    <p>金融专用微调模型的需求增长了56%，显示专业领域AI应用的巨大潜力。</p>
-                </div>
+            <div class="analysis-section">
+                <h3>🔍 市场应用洞察</h3>
+                <p>AI在宏观经济监控中的应用正在从辅助分析向决策支持演进。我们的14维模型结合了多模型优势，实现了更精准的市场预测。</p>
+                
+                <ul class="analysis-list">
+                    <li>🎯 <strong>多模型融合</strong>: 结合GPT-5.2的深度分析能力和Qwen3 Max的本地化理解</li>
+                    <li>🔄 <strong>实时更新</strong>: AI模型能够快速适应市场变化，提供及时的分析洞察</li>
+                    <li>🛡️ <strong>风险控制</strong>: 通过多维度验证机制确保分析结果的可靠性</li>
+                </ul>
             </div>
-        </section>
 
-        <!-- 投资建议 -->
-        <section class="investment-insights">
-            <h2 class="section-title">AI驱动的投资洞察</h2>
-            <div class="insight-cards">
-                <div class="insight-card">
-                    <h3>风险控制</h3>
-                    <p>AI模型在识别市场异常信号方面比传统方法快47%，建议将AI预警系统纳入风险管理流程。</p>
-                </div>
-                <div class="insight-card">
-                    <h3>机会发现</h3>
-                    <p>多模型集成分析能够发现单一模型遗漏的跨市场关联，提升投资机会识别率23%。</p>
-                </div>
-                <div class="insight-card">
-                    <h3>成本优化</h3>
-                    <p>混合使用开源和商业模型可降低AI分析成本62%，同时保持90%以上的分析质量。</p>
-                </div>
+            <div class="analysis-section">
+                <h3>🚀 未来发展方向</h3>
+                <p>随着AI技术的持续进步，我们的监控系统将实现更智能的自动化分析和预测能力。</p>
+                
+                <ul class="analysis-list">
+                    <li>🧠 <strong>自适应学习</strong>: 系统将根据历史准确性自动调整权重分配</li>
+                    <li>🌐 <strong>全球化覆盖</strong>: 扩展更多国际市场的数据源和分析维度</li>
+                    <li>📱 <strong>移动端优化</strong>: 提供更友好的移动设备体验和实时推送</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
+        <div class="footer-content">
             <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
             <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
