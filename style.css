@@ -1,556 +1,535 @@
-/* 宏观经济监控仪表盘 - 现代化样式 */
-/* 参考 sanwan.ai 设计风格 */
+/* 
+ * 14维宏观监控仪表盘 - 参考sanwan.ai极简设计风格
+ * 设计原则: 极简主义、大量留白、清晰层级、响应式优先
+ */
 
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
-    --info-color: #3b82f6;
-    --light-bg: #f8fafc;
-    --dark-bg: #0f172a;
-    --card-bg: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
+/* 基础重置 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 系统字体栈 - 与sanwan.ai保持一致 */
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    color: var(--text-primary);
-    background-color: var(--light-bg);
-    min-height: 100vh;
+    color: #000;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 导航栏 */
+/* 容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 - sanwan.ai风格 */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow-lg);
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
 }
 
 .nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.nav-container h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo h1 i {
+    font-size: 20px;
+}
+
+.version {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    margin-left: 8px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-menu a {
-    color: white;
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
-}
-
-/* 主要内容区域 */
-.main-content {
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-
-/* 仪表盘头部 */
-.dashboard-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-}
-
-.dashboard-header h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.dashboard-header p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* 综合评分卡片 */
-.overall-score-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 20px;
-    padding: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 0;
     position: relative;
-    overflow: hidden;
+    transition: color 0.2s ease;
 }
 
-.overall-score-card::before {
+.nav-menu a:hover {
+    color: #007aff;
+}
+
+.nav-menu a.active {
+    color: #007aff;
+}
+
+.nav-menu a.active::after {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    transform: rotate(30deg);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #007aff;
+}
+
+/* 主内容区域 */
+.dashboard {
+    padding: 20px 0 60px;
+}
+
+/* 卡片基础样式 - sanwan.ai卡片风格 */
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+/* 综合评分卡片 - 顶部展示最新报告摘要 */
+.score-card {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.score-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.score-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.last-updated {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
 }
 
 .score-value {
-    font-size: 6rem;
-    font-weight: 800;
-    margin: 1rem 0;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-size: 64px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+    line-height: 1;
 }
 
 .score-status {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-bottom: 24px;
+    color: #007aff;
 }
 
-.status-bullish { color: #10b981; }
-.status-neutral { color: #f59e0b; }
-.status-bearish { color: #ef4444; }
-
-.last-updated {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    margin-top: 1rem;
+.score-details {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
-/* 14维度网格 */
+.detail-item {
+    text-align: center;
+}
+
+.detail-item .label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.detail-item .value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* 最新报告摘要 - 整合到综合评分下方 */
+.report-summary {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+}
+
+.report-summary p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.read-full-report {
+    display: inline-block;
+    color: #007aff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.read-full-report:hover {
+    color: #0056b3;
+}
+
+/* 关键指标概览 */
+.key-indicators h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.indicator-card {
+    text-align: center;
+    padding: 24px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.indicator-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.indicator-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.indicator-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.indicator-change {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.indicator-change.positive {
+    color: #28a745;
+}
+
+.indicator-change.negative {
+    color: #dc3545;
+}
+
+.indicator-change.neutral {
+    color: #6c757d;
+}
+
+.indicator-source {
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* 14维度监控模型 */
+.dimensions-overview {
+    margin-top: 40px;
+}
+
+.model-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.layer {
+    padding: 24px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.layer h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+}
+
 .dimensions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .dimension-card {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dimension-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-.dimension-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-}
-
-.core-macro::before { background: var(--primary-color); }
-.policy-external::before { background: #8b5cf6; }
-.market-mapping::before { background: #f59e0b; }
-.theme-panel::before { background: #10b981; }
 
 .dimension-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-}
-
-.dimension-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0;
+    margin-bottom: 12px;
 }
 
 .dimension-id {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 600;
+    color: #007aff;
+    background: rgba(0, 122, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
-.weight-badge {
-    display: inline-block;
-    background: #f1f5f9;
-    color: var(--text-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+.weight {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+.dimension-card h4 {
+    font-size: 16px;
     font-weight: 600;
-    margin-right: 0.5rem;
+    color: #000;
+    margin-bottom: 12px;
+    line-height: 1.4;
 }
 
-.score-badge {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+.score {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.contribution {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.trend {
+    font-size: 16px;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.key-indicators {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border-color);
+.trend.up {
+    color: #28a745;
 }
 
-.indicator-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+.trend.down {
+    color: #dc3545;
 }
 
-.indicator-name {
-    color: var(--text-secondary);
+.trend.neutral {
+    color: #6c757d;
 }
 
-.indicator-value {
-    font-weight: 600;
-    color: var(--text-primary);
+/* 预警信号页面专用样式 */
+.alerts-page .alerts-section {
+    margin-top: 0;
 }
 
-/* 数据源部分 */
-.data-sources {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-}
-
-.data-sources h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
-    text-align: center;
-}
-
-.sources-grid {
+.alerts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
 }
 
-.source-item {
+.alert-card {
+    padding: 24px;
+    border-radius: 8px;
     text-align: center;
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: #f8fafc;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
 
-.source-item:hover {
-    background: #f1f5f9;
-    transform: translateY(-2px);
+.alert-card.green {
+    background: #f8fff9;
+    border-color: #28a745;
 }
 
-.source-name {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+.alert-card.red {
+    background: #fff8f8;
+    border-color: #dc3545;
 }
 
-.source-description {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+.alert-card.yellow {
+    background: #fffbeb;
+    border-color: #ffc107;
 }
 
-/* 图表区域 */
-.charts-section {
-    margin-bottom: 3rem;
+.alert-card i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
 }
 
-.charts-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    text-align: center;
+.alert-card.green i {
+    color: #28a745;
 }
 
-.chart-container {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-    height: 450px;
+.alert-card.red i {
+    color: #dc3545;
 }
 
-/* 最新报告摘要 */
-.latest-report {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-    border-radius: 20px;
-    padding: 3rem;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
+.alert-card.yellow i {
+    color: #ffc107;
 }
 
-.latest-report h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+.alert-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
 }
 
-.report-summary {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.read-full-report {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 0.8rem 2.5rem;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
-}
-
-.read-full-report:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+.alert-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
 
 /* 页脚 */
 .footer {
-    background: var(--dark-bg);
-    color: white;
-    padding: 3rem 0 2rem;
-    margin-top: 4rem;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
 }
 
 .footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
     text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.footer-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-link {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: white;
-}
-
-.copyright {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    opacity: 0.8;
+.footer-content p {
+    margin-bottom: 8px;
 }
 
 /* 响应式设计 */
-@media (max-width: 1024px) {
-    .nav-container {
-        padding: 0 1.5rem;
-    }
-    
-    .main-content {
-        padding: 0 1.5rem;
-    }
-    
-    .dashboard-header {
-        padding: 1.5rem;
-    }
-    
-    .dashboard-header h1 {
-        font-size: 2rem;
-    }
-    
-    .overall-score-card {
-        padding: 2rem;
-    }
-    
-    .score-value {
-        font-size: 4rem;
-    }
-    
-    .dimension-card {
-        padding: 1.25rem;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+        align-items: flex-start;
+        gap: 16px;
     }
     
     .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
+        justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
     }
     
-    .nav-menu a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-    
-    .main-content {
-        padding: 0 1rem;
-    }
-    
-    .dashboard-header {
-        padding: 1.5rem 1rem;
-    }
-    
-    .dashboard-header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .dashboard-header p {
-        font-size: 1rem;
-    }
-    
-    .overall-score-card {
-        padding: 1.5rem;
+    .score-card {
+        padding: 32px 20px;
     }
     
     .score-value {
-        font-size: 3rem;
-    }
-    
-    .score-status {
-        font-size: 1.2rem;
+        font-size: 48px;
     }
     
     .dimensions-grid {
         grid-template-columns: 1fr;
     }
     
-    .chart-container {
-        height: 350px;
-    }
-    
-    .latest-report {
-        padding: 2rem 1rem;
-    }
-    
-    .latest-report h2 {
-        font-size: 1.5rem;
-    }
-    
-    .report-summary {
-        font-size: 1rem;
-    }
-    
-    .read-full-report {
-        padding: 0.7rem 2rem;
-        font-size: 1rem;
+    .layer {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .score-card {
+        padding: 24px 16px;
+    }
+    
     .score-value {
-        font-size: 2.5rem;
+        font-size: 36px;
     }
     
-    .dimension-title {
-        font-size: 1rem;
+    .score-header h2 {
+        font-size: 24px;
     }
     
-    .weight-badge,
-    .score-badge {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.6rem;
-    }
-    
-    .chart-container {
-        height: 300px;
-    }
-    
-    .footer-links {
-        gap: 1rem;
-        flex-direction: column;
+    .detail-item {
+        flex: 1;
+        min-width: 120px;
     }
 }
