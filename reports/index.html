@@ -3,97 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14维市场日报 - 宏观经济监控</title>
+    <title>市场日报 - 14维宏观监控</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <h1>14维宏观监控仪表盘</h1>
+            <div class="logo">
+                <h1>宏观经济监控仪表盘</h1>
+                <span class="version">v2 · 14维机构级模型</span>
+            </div>
             <ul class="nav-menu">
                 <li><a href="../index.html">仪表盘</a></li>
                 <li><a href="#reports" class="active">日报</a></li>
                 <li><a href="../glossary.html">术语解释</a></li>
                 <li><a href="../data-dashboard.html">数据看板</a></li>
+                <li><a href="../alerts.html">预警信号</a></li>
                 <li><a href="../ai-analysis.html">AI分析</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 日报主区域 -->
+    <!-- 报告列表主区域 -->
     <main class="dashboard">
         <section class="reports-header">
-            <h2>📅 14维市场日报档案</h2>
-            <p>基于14维机构级宏观监控模型的每日市场分析</p>
+            <h2>📊 市场日报档案</h2>
+            <p>基于14维宏观监控模型的每日市场分析报告</p>
         </section>
 
         <!-- 报告列表 -->
         <section class="reports-list">
             <div class="report-item">
-                <div>
-                    <div class="report-date">2026-03-05</div>
-                    <span class="score-badge">综合评分: 59.2/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="2026-03-05.html" class="report-link">查看报告</a>
+                <h3><a href="2026-03-05.html">2026年3月5日 市场日报</a></h3>
+                <p class="report-meta">综合评分: 58.6/100 | 中性偏多 | 更新时间: 15:45</p>
+                <p class="report-summary">今日综合评分为58.6分，维持中性偏多观点。10Y-3M利差已转正至+34bps，倒挂信号显著弱化，货币政策环境有所改善。但通胀压力仍存，房地产市场继续承压。</p>
             </div>
-            
-            <div class="report-item">
-                <div>
-                    <div class="report-date">2026-03-04</div>
-                    <span class="score-badge">综合评分: 58.8/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="2026-03-04.html" class="report-link">查看报告</a>
-            </div>
-            
-            <div class="report-item">
-                <div>
-                    <div class="report-date">2026-03-01</div>
-                    <span class="score-badge">综合评分: 58.4/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="2026-03-01.html" class="report-link">查看报告</a>
-            </div>
-            
-            <div class="report-item">
-                <div>
-                    <div class="report-date">2026-02-28</div>
-                    <span class="score-badge">综合评分: 57.9/100</span>
-                    <span class="signal-badge">投资信号: 中性偏多</span>
-                </div>
-                <a href="2026-02-28.html" class="report-link">查看报告</a>
-            </div>
+            <!-- 更多报告将在此处列出 -->
         </section>
 
-        <!-- 14维模型说明 -->
-        <section class="model-info">
-            <h3>📊 14维宏观监控模型说明</h3>
-            <div class="model-details">
-                <p><strong>Core Macro (70%)</strong>: D01-D06, D10 - 货币政策、增长、通胀、就业、企业、房地产、金融条件</p>
-                <p><strong>Policy & External (21%)</strong>: D08-D09, D12 - 外部部门、财政政策、信心与不确定性</p>
-                <p><strong>Market Mapping (11%)</strong>: D07, D11 - 风险偏好、大宗商品与地缘风险</p>
-                <p><strong>Theme Panel (5%)</strong>: D13-D14 - AI资本开支、加密流动性</p>
-            </div>
-        </section>
-
-        <!-- 报告生成说明 -->
+        <!-- 报告说明 -->
         <section class="reports-info">
             <h3>📈 报告生成说明</h3>
-            <div class="info-content">
-                <p><strong>生成时间：</strong>工作日（周一至周五）上午9点（中国时间）和晚上10点（北京时间）</p>
-                <p><strong>数据验证：</strong>所有关键数据均通过官方数据源验证（FRED、BEA、BLS等）</p>
-                <p><strong>模型版本：</strong>基于14维机构级宏观监控模型（最终版）</p>
-                <p><strong>更新频率：</strong>每日自动更新，确保数据时效性</p>
-            </div>
+            <ul>
+                <li>报告在工作日（周一至周五）自动生成</li>
+                <li>每日两次更新：中国时间 09:00 和 22:00</li>
+                <li>基于14维宏观监控模型，包含45个核心指标</li>
+                <li>综合评分范围：0-100分，分数越高表示市场环境越有利</li>
+            </ul>
         </section>
     </main>
 
     <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2026 14维宏观监控系统 | 每日更新 | 基于14维机构级宏观监控模型</p>
+            <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
+            <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
     </footer>
 </body>
