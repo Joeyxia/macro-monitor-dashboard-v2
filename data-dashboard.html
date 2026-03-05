@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenViking数据看板 - 14维宏观监控</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>14维宏观监控仪表盘</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">仪表盘</a></li>
+                <li><a href="reports/">日报</a></li>
+                <li><a href="glossary.html">术语解释</a></li>
+                <li><a href="#data-dashboard" class="active">数据看板</a></li>
+                <li><a href="ai-analysis.html">AI分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 数据看板主区域 -->
+    <main class="dashboard">
+        <section class="data-header">
+            <h2>📊 OpenViking数据看板</h2>
+            <p>基于14维宏观监控模型的历史数据可视化与趋势分析</p>
+        </section>
+
+        <!-- 14维权重分布图 -->
+        <section class="chart-section">
+            <h3>14维模型权重分布</h3>
+            <div class="chart-container">
+                <canvas id="weightDistributionChart"></canvas>
+            </div>
+        </section>
+
+        <!-- 核心指标历史趋势 -->
+        <section class="chart-section">
+            <h3>核心指标历史趋势</h3>
+            <div class="chart-filters">
+                <select id="indicatorSelector">
+                    <option value="YC_10Y3M">10Y-3M利差 (D01)</option>
+                    <option value="VIX">VIX波动率指数 (D07)</option>
+                    <option value="GDP_QOQ_SAAR">实际GDP环比折年 (D02)</option>
+                    <option value="CORE_CPI_YOY">核心CPI同比 (D03)</option>
+                    <option value="UNRATE">失业率 (D04)</option>
+                    <option value="SOFR">SOFR利率 (D01)</option>
+                    <option value="FED_ASSETS">美联储总资产 (D01)</option>
+                    <option value="PMI_MAN">制造业PMI (D02)</option>
+                    <option value="DXY">美元指数DXY (D08)</option>
+                    <option value="FISCAL_DEFICIT">财政赤字/GDP (D09)</option>
+                </select>
+                <select id="timeRange">
+                    <option value="6m">最近6个月</option>
+                    <option value="1y" selected>最近1年</option>
+                    <option value="2y">最近2年</option>
+                    <option value="5y">最近5年</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="historicalTrendChart"></canvas>
+            </div>
+        </section>
+
+        <!-- 综合评分历史 -->
+        <section class="chart-section">
+            <h3>14维综合评分历史轨迹</h3>
+            <div class="chart-container">
+                <canvas id="overallScoreChart"></canvas>
+            </div>
+            <div class="score-interpretation">
+                <div class="interpretation-item bullish">
+                    <span>≥70分</span> - 强烈看多
+                </div>
+                <div class="interpretation-item neutral-high">
+                    <span>60-69分</span> - 温和看多
+                </div>
+                <div class="interpretation-item neutral">
+                    <span>40-59分</span> - 中性
+                </div>
+                <div class="interpretation-item neutral-low">
+                    <span>30-39分</span> - 温和看空
+                </div>
+                <div class="interpretation-item bearish">
+                    <span>≤29分</span> - 强烈看空
+                </div>
+            </div>
+        </section>
+
+        <!-- 维度相关性分析 -->
+        <section class="chart-section">
+            <h3>14维间相关性分析</h3>
+            <div class="chart-container">
+                <canvas id="correlationHeatmap"></canvas>
+            </div>
+        </section>
+
+        <!-- 数据统计摘要 -->
+        <section class="data-summary">
+            <h3>数据统计摘要</h3>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h4>总指标数量</h4>
+                    <p class="number">45个</p>
+                </div>
+                <div class="summary-card">
+                    <h4>覆盖时间范围</h4>
+                    <p class="number">2024-01 至今</p>
+                </div>
+                <div class="summary-card">
+                    <h4>数据源数量</h4>
+                    <p class="number">8个</p>
+                </div>
+                <div class="summary-card">
+                    <h4>更新频率</h4>
+                    <p class="number">实时</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 预警信号监控 -->
+        <section class="alerts-section">
+            <h3>🚨 预警信号监控</h3>
+            <div class="alerts-grid">
+                <div class="alert-card red-alert">
+                    <h4>红灯预警</h4>
+                    <p>当前无红灯预警</p>
+                </div>
+                <div class="alert-card yellow-alert">
+                    <h4>黄灯预警</h4>
+                    <p>10Y-3M利差: +34bps (正常)</p>
+                </div>
+                <div class="alert-card green-alert">
+                    <h4>绿灯状态</h4>
+                    <p>VIX: 18.63 (低位)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 14维宏观监控系统 | 基于机构级宏观监控模型</p>
+            <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board</p>
+        </div>
+    </footer>
+
+    <script src="data-dashboard.js"></script>
+</body>
+</html>
