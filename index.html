@@ -27,28 +27,16 @@
         </div>
     </nav>
 
-    <!-- 头部区域 -->
-    <div class="header">
-        <div class="container">
-            <h1>📊 宏观经济监控仪表盘</h1>
-            <p>基于14维机构级宏观监控模型的每日市场分析</p>
-            <div class="info-box">
-                <strong>📈 报告更新时间：</strong>工作日 09:00 (中国时间) & 22:00 (北京时间)<br>
-                <strong>🔍 数据来源：</strong>FRED, BEA, BLS, NY Fed, Conference Board等官方机构
-            </div>
-        </div>
-    </div>
-
     <!-- 主要内容区域 -->
     <main class="container">
         <!-- 综合评分与报告摘要卡片 -->
         <div class="report-item">
             <div class="report-item-content">
                 <div class="report-date">2026-03-05</div>
-                <span class="score-badge">综合评分: 58.6/100</span>
+                <span class="score-badge">综合评分: 59.4/100</span>
                 <span class="signal-badge">投资信号: 中性偏多</span>
                 <div class="report-summary">
-                    <p>今日综合评分为58.6分，维持中性偏多观点。10Y-3M利差已转正至+34bps，倒挂信号显著弱化，货币政策环境有所改善。但通胀压力仍存，房地产市场继续承压。</p>
+                    <p>今日综合评分为59.4分，维持中性偏多观点。10Y-3M利差已转正至+38bps，倒挂信号显著弱化，货币政策环境有所改善。VIX指数降至18.2，市场风险偏好回升。但通胀压力仍存，房地产市场继续承压。</p>
                 </div>
             </div>
             <a href="reports/2026-03-05.html" class="report-link">查看完整报告 →</a>
@@ -59,14 +47,14 @@
         <div class="indicators-grid">
             <div class="indicator-card">
                 <div class="indicator-title">10Y-3M利差</div>
-                <div class="indicator-value">+34 bps</div>
-                <div class="indicator-change positive">+2 bps</div>
+                <div class="indicator-value">+38 bps</div>
+                <div class="indicator-change positive">+4 bps</div>
                 <div class="indicator-source">FRED</div>
             </div>
             <div class="indicator-card">
                 <div class="indicator-title">VIX指数</div>
-                <div class="indicator-value">18.63</div>
-                <div class="indicator-change negative">-1.87</div>
+                <div class="indicator-value">18.2</div>
+                <div class="indicator-change negative">-0.43</div>
                 <div class="indicator-source">CBOE</div>
             </div>
             <div class="indicator-card">
@@ -77,8 +65,8 @@
             </div>
             <div class="indicator-card">
                 <div class="indicator-title">核心CPI</div>
-                <div class="indicator-value">2.5%</div>
-                <div class="indicator-change neutral">0.0%</div>
+                <div class="indicator-value">2.4%</div>
+                <div class="indicator-change neutral">-0.1%</div>
                 <div class="indicator-source">BLS</div>
             </div>
         </div>
@@ -90,47 +78,61 @@
         <div class="dimension">
             <h3>Core Macro 层级 <span>(70%权重)</span></h3>
             <div class="dimensions-grid">
-                <div class="indicator-card">
-                    <div class="indicator-title">D01 货币政策与流动性 (12%)</div>
-                    <div class="indicator-value">69/100</div>
-                    <div class="indicator-change up">加权贡献: 8.28分</div>
-                    <div class="indicator-source">↑</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D01 货币政策与流动性 <span class="weight">(12%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">72/100</span>
+                        <span class="contribution">加权贡献: 8.64分</span>
+                        <span class="trend up">↑</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D02 增长与前瞻 (11%)</div>
-                    <div class="indicator-value">55/100</div>
-                    <div class="indicator-change down">加权贡献: 6.05分</div>
-                    <div class="indicator-source">↓</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D02 增长与前瞻 <span class="weight">(11%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">55/100</span>
+                        <span class="contribution">加权贡献: 6.05分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D03 通胀与价格压力 (10%)</div>
-                    <div class="indicator-value">48/100</div>
-                    <div class="indicator-change neutral">加权贡献: 4.80分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D03 通胀与价格压力 <span class="weight">(10%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">50/100</span>
+                        <span class="contribution">加权贡献: 5.00分</span>
+                        <span class="trend up">↑</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D04 就业与居民部门 (10%)</div>
-                    <div class="indicator-value">65/100</div>
-                    <div class="indicator-change up">加权贡献: 6.50分</div>
-                    <div class="indicator-source">↑</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D04 就业与居民部门 <span class="weight">(10%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">65/100</span>
+                        <span class="contribution">加权贡献: 6.50分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D05 企业盈利与信用 (8%)</div>
-                    <div class="indicator-value">52/100</div>
-                    <div class="indicator-change neutral">加权贡献: 4.16分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D05 企业盈利与信用 <span class="weight">(8%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">52/100</span>
+                        <span class="contribution">加权贡献: 4.16分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D06 房地产与利率敏感 (6%)</div>
-                    <div class="indicator-value">45/100</div>
-                    <div class="indicator-change down">加权贡献: 2.70分</div>
-                    <div class="indicator-source">↓</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D06 房地产与利率敏感 <span class="weight">(6%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">45/100</span>
+                        <span class="contribution">加权贡献: 2.70分</span>
+                        <span class="trend down">↓</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D10 金融条件与信用传导 (6%)</div>
-                    <div class="indicator-value">58/100</div>
-                    <div class="indicator-change up">加权贡献: 3.48分</div>
-                    <div class="indicator-source">↑</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D10 金融条件与信用传导 <span class="weight">(6%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">58/100</span>
+                        <span class="contribution">加权贡献: 3.48分</span>
+                        <span class="trend up">↑</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,23 +141,29 @@
         <div class="dimension">
             <h3>Policy & External 层级 <span>(21%权重)</span></h3>
             <div class="dimensions-grid">
-                <div class="indicator-card">
-                    <div class="indicator-title">D08 外部部门与美元 (7%)</div>
-                    <div class="indicator-value">54/100</div>
-                    <div class="indicator-change neutral">加权贡献: 3.78分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D08 外部部门与美元 <span class="weight">(7%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">54/100</span>
+                        <span class="contribution">加权贡献: 3.78分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D09 财政政策与债务 (8%)</div>
-                    <div class="indicator-value">42/100</div>
-                    <div class="indicator-change down">加权贡献: 3.36分</div>
-                    <div class="indicator-source">↓</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D09 财政政策与债务 <span class="weight">(8%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">42/100</span>
+                        <span class="contribution">加权贡献: 3.36分</span>
+                        <span class="trend down">↓</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D12 信心与不确定性 (6%)</div>
-                    <div class="indicator-value">51/100</div>
-                    <div class="indicator-change neutral">加权贡献: 3.06分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D12 信心与不确定性 <span class="weight">(6%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">51/100</span>
+                        <span class="contribution">加权贡献: 3.06分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,17 +172,21 @@
         <div class="dimension">
             <h3>Market Mapping 层级 <span>(11%权重)</span></h3>
             <div class="dimensions-grid">
-                <div class="indicator-card">
-                    <div class="indicator-title">D07 风险偏好与波动 (6%)</div>
-                    <div class="indicator-value">59/100</div>
-                    <div class="indicator-change up">加权贡献: 3.54分</div>
-                    <div class="indicator-source">↑</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D07 风险偏好与波动 <span class="weight">(6%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">60/100</span>
+                        <span class="contribution">加权贡献: 3.60分</span>
+                        <span class="trend up">↑</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D11 大宗商品与地缘风险 (5%)</div>
-                    <div class="indicator-value">47/100</div>
-                    <div class="indicator-change neutral">加权贡献: 2.35分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D11 大宗商品与地缘风险 <span class="weight">(5%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">47/100</span>
+                        <span class="contribution">加权贡献: 2.35分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,17 +195,21 @@
         <div class="dimension">
             <h3>Theme Panel 层级 <span>(5%权重)</span></h3>
             <div class="dimensions-grid">
-                <div class="indicator-card">
-                    <div class="indicator-title">D13 AI资本开支周期 (4%)</div>
-                    <div class="indicator-value">61/100</div>
-                    <div class="indicator-change up">加权贡献: 2.44分</div>
-                    <div class="indicator-source">↑</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D13 AI资本开支周期 <span class="weight">(4%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">61/100</span>
+                        <span class="contribution">加权贡献: 2.44分</span>
+                        <span class="trend up">↑</span>
+                    </div>
                 </div>
-                <div class="indicator-card">
-                    <div class="indicator-title">D14 加密流动性 (1%)</div>
-                    <div class="indicator-value">57/100</div>
-                    <div class="indicator-change neutral">加权贡献: 0.57分</div>
-                    <div class="indicator-source">→</div>
+                <div class="dimension-item">
+                    <div class="dimension-title">D14 加密流动性 <span class="weight">(1%)</span></div>
+                    <div class="weight-score">
+                        <span class="score">57/100</span>
+                        <span class="contribution">加权贡献: 0.57分</span>
+                        <span class="trend neutral">→</span>
+                    </div>
                 </div>
             </div>
         </div>
