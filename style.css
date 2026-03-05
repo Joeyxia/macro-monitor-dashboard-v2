@@ -111,6 +111,24 @@ body::before {
   background: rgba(0, 240, 255, 0.1);
 }
 
+/* 返回主页按钮 */
+.back-to-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(0, 240, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+  background: rgba(0, 240, 255, 0.2);
+  transform: translateX(3px);
+}
+
 /* 主仪表盘区域 */
 .dashboard {
   padding: 40px 0;
@@ -321,25 +339,12 @@ body::before {
   font-size: 0.9rem;
 }
 
-/* 14维度监控模型 */
+/* 14维度监控模型 - 使用和关键指标相同的样式 */
 .dimensions-overview h2 {
-  font-size: 2rem;
-  margin: 40px 0 25px 0;
-  color: var(--text-primary);
-  border-bottom: 3px solid var(--primary);
-  padding-bottom: 15px;
-  font-weight: 700;
-  position: relative;
-}
-
-.dimensions-overview h2::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--secondary);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .model-layers {
@@ -358,8 +363,8 @@ body::before {
 }
 
 .layer h3 {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
   color: var(--primary);
   font-weight: 600;
   display: flex;
@@ -367,12 +372,7 @@ body::before {
   gap: 10px;
 }
 
-.dimensions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
+/* 使用和关键指标相同的卡片样式 */
 .dimension-card {
   background: var(--gradient-card);
   padding: 25px;
