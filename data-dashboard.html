@@ -8,34 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>宏观经济监控仪表盘</h1>
-                <span class="version">v2 · 14维机构级模型</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">仪表盘</a></li>
-                <li><a href="reports/">日报</a></li>
-                <li><a href="glossary.html">术语解释</a></li>
-                <li><a href="#data-dashboard" class="active">数据看板</a></li>
-                <li><a href="alerts.html">预警信号</a></li>
-                <li><a href="ai-analysis.html">AI分析</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- 数据看板主区域 -->
-    <main class="dashboard">
-        <section class="data-header">
-            <h2>📊 OpenViking数据看板</h2>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container">
+            <h1>📊 OpenViking数据看板</h1>
             <p>基于14维宏观监控模型的历史数据可视化与趋势分析</p>
-        </section>
+        </div>
+    </header>
 
+    <!-- 主容器 -->
+    <main class="container">
         <!-- 14维权重分布图 -->
         <section class="chart-section">
-            <h3>14维模型权重分布</h3>
+            <h2 class="section-title">14维模型权重分布</h2>
             <div class="chart-container">
                 <canvas id="weightDistributionChart"></canvas>
             </div>
@@ -43,7 +28,7 @@
 
         <!-- 核心指标历史趋势 -->
         <section class="chart-section">
-            <h3>核心指标历史趋势</h3>
+            <h2 class="section-title">核心指标历史趋势</h2>
             <div class="chart-filters">
                 <select id="indicatorSelector">
                     <option value="YC_10Y3M">10Y-3M利差 (D01)</option>
@@ -71,7 +56,7 @@
 
         <!-- 综合评分历史 -->
         <section class="chart-section">
-            <h3>14维综合评分历史轨迹</h3>
+            <h2 class="section-title">14维综合评分历史轨迹</h2>
             <div class="chart-container">
                 <canvas id="overallScoreChart"></canvas>
             </div>
@@ -96,7 +81,7 @@
 
         <!-- 维度相关性分析 -->
         <section class="chart-section">
-            <h3>14维间相关性分析</h3>
+            <h2 class="section-title">14维间相关性分析</h2>
             <div class="chart-container">
                 <canvas id="correlationHeatmap"></canvas>
             </div>
@@ -104,22 +89,22 @@
 
         <!-- 数据统计摘要 -->
         <section class="data-summary">
-            <h3>数据统计摘要</h3>
+            <h2 class="section-title">数据统计摘要</h2>
             <div class="summary-grid">
                 <div class="summary-card">
-                    <h4>总指标数量</h4>
+                    <h3>总指标数量</h3>
                     <p class="number">45个</p>
                 </div>
                 <div class="summary-card">
-                    <h4>覆盖时间范围</h4>
+                    <h3>覆盖时间范围</h3>
                     <p class="number">2024-01 至今</p>
                 </div>
                 <div class="summary-card">
-                    <h4>数据源数量</h4>
+                    <h3>数据源数量</h3>
                     <p class="number">8个</p>
                 </div>
                 <div class="summary-card">
-                    <h4>更新频率</h4>
+                    <h3>更新频率</h3>
                     <p class="number">实时</p>
                 </div>
             </div>
@@ -127,18 +112,18 @@
 
         <!-- 预警信号监控 -->
         <section class="alerts-section">
-            <h3>🚨 预警信号监控</h3>
+            <h2 class="section-title">🚨 预警信号监控</h2>
             <div class="alerts-grid">
                 <div class="alert-card red-alert">
-                    <h4>红灯预警</h4>
+                    <h3>红灯预警</h3>
                     <p>当前无红灯预警</p>
                 </div>
                 <div class="alert-card yellow-alert">
-                    <h4>黄灯预警</h4>
+                    <h3>黄灯预警</h3>
                     <p>10Y-3M利差: +34bps (正常)</p>
                 </div>
                 <div class="alert-card green-alert">
-                    <h4>绿灯状态</h4>
+                    <h3>绿灯状态</h3>
                     <p>VIX: 18.63 (低位)</p>
                 </div>
             </div>
@@ -147,7 +132,7 @@
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container">
             <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
             <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
