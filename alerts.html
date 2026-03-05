@@ -7,126 +7,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 头部 -->
-    <header class="header">
-        <div class="container">
-            <h1>🚨 预警信号监控</h1>
-            <p>实时监控14维宏观模型中的关键预警指标</p>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
+                <span class="version">v2 · 14维机构级模型</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">仪表盘</a></li>
+                <li><a href="reports/">日报</a></li>
+                <li><a href="glossary.html">术语解释</a></li>
+                <li><a href="data-dashboard.html">数据看板</a></li>
+                <li><a href="#alerts" class="active">预警信号</a></li>
+                <li><a href="ai-analysis.html">AI分析</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- 主容器 -->
-    <main class="container">
-        <!-- 当前预警状态 -->
-        <section class="alert-status">
-            <h2 class="section-title">当前预警状态</h2>
-            <div class="alert-summary">
-                <div class="status-card green">
-                    <h3>🟢 绿灯状态</h3>
+    <!-- 预警信号主区域 -->
+    <main class="dashboard">
+        <section class="alerts-header">
+            <h2>🚨 预警信号监控</h2>
+            <p>基于14维宏观监控模型的实时预警系统</p>
+        </section>
+
+        <section class="alerts-container">
+            <div class="alert-card green">
+                <i class="fas fa-check-circle"></i>
+                <div class="alert-content">
+                    <h3>无预警信号</h3>
                     <p>当前所有维度均在正常范围内运行</p>
-                    <p class="last-updated">最后更新: 2026-03-05 15:45</p>
+                </div>
+            </div>
+            
+            <div class="alerts-grid">
+                <div class="alert-card green-alert">
+                    <h4>绿灯状态</h4>
+                    <p>VIX: 18.63 (低位)</p>
+                </div>
+                <div class="alert-card yellow-alert">
+                    <h4>黄灯预警</h4>
+                    <p>10Y-3M利差: +34bps (正常)</p>
+                </div>
+                <div class="alert-card red-alert">
+                    <h4>红灯预警</h4>
+                    <p>当前无红灯预警</p>
                 </div>
             </div>
         </section>
 
-        <!-- 预警指标详情 -->
-        <section class="alert-details">
-            <h2 class="section-title">预警指标详情</h2>
-            <div class="alert-grid">
-                <div class="alert-item">
-                    <div class="alert-header">
-                        <span class="alert-icon">📉</span>
-                        <h3>10Y-3M利差</h3>
-                        <span class="alert-level green">正常</span>
-                    </div>
-                    <div class="alert-content">
-                        <p>当前值: +34 bps</p>
-                        <p>预警阈值: &lt; -50 bps (红灯)</p>
-                        <p>趋势: 改善中 ↑</p>
-                    </div>
+        <section class="monitoring-details">
+            <h3>监控维度详情</h3>
+            <div class="monitoring-grid">
+                <div class="monitoring-item">
+                    <h4>D01 货币政策与流动性</h4>
+                    <p>状态: 正常 ✅</p>
+                    <p>关键指标: 10Y-3M利差 +34bps</p>
                 </div>
-                <div class="alert-item">
-                    <div class="alert-header">
-                        <span class="alert-icon">📊</span>
-                        <h3>VIX波动率指数</h3>
-                        <span class="alert-level green">正常</span>
-                    </div>
-                    <div class="alert-content">
-                        <p>当前值: 18.63</p>
-                        <p>预警阈值: &gt; 30 (黄灯), &gt; 40 (红灯)</p>
-                        <p>趋势: 稳定 →</p>
-                    </div>
+                <div class="monitoring-item">
+                    <h4>D07 风险偏好与波动</h4>
+                    <p>状态: 正常 ✅</p>
+                    <p>关键指标: VIX 18.63</p>
                 </div>
-                <div class="alert-item">
-                    <div class="alert-header">
-                        <span class="alert-icon">💼</span>
-                        <h3>失业率</h3>
-                        <span class="alert-level green">正常</span>
-                    </div>
-                    <div class="alert-content">
-                        <p>当前值: 4.3%</p>
-                        <p>预警阈值: &gt; 5.5% (黄灯), &gt; 6.5% (红灯)</p>
-                        <p>趋势: 稳定 →</p>
-                    </div>
+                <div class="monitoring-item">
+                    <h4>D09 财政政策与债务</h4>
+                    <p>状态: 警告 ⚠️</p>
+                    <p>关键指标: 财政赤字/GDP 6.2%</p>
                 </div>
-                <div class="alert-item">
-                    <div class="alert-header">
-                        <span class="alert-icon">💰</span>
-                        <h3>财政赤字/GDP</h3>
-                        <span class="alert-level yellow">关注</span>
-                    </div>
-                    <div class="alert-content">
-                        <p>当前值: 6.8%</p>
-                        <p>预警阈值: &gt; 6% (黄灯), &gt; 8% (红灯)</p>
-                        <p>趋势: 恶化中 ↓</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 历史预警记录 -->
-        <section class="alert-history">
-            <h2 class="section-title">历史预警记录</h2>
-            <div class="history-list">
-                <div class="history-item">
-                    <div class="history-date">2026-02-15</div>
-                    <div class="history-content">
-                        <span class="history-type red">🔴 红灯预警</span>
-                        <span>10Y-3M利差: -62 bps</span>
-                    </div>
-                </div>
-                <div class="history-item">
-                    <div class="history-date">2026-02-20</div>
-                    <div class="history-content">
-                        <span class="history-type yellow">🟡 黄灯预警</span>
-                        <span>VIX: 32.5</span>
-                    </div>
-                </div>
-                <div class="history-item">
-                    <div class="history-date">2026-02-28</div>
-                    <div class="history-content">
-                        <span class="history-type green">🟢 解除预警</span>
-                        <span>10Y-3M利差转正至+12 bps</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 预警规则说明 -->
-        <section class="alert-rules">
-            <h2 class="section-title">预警规则说明</h2>
-            <div class="rules-content">
-                <div class="rule-item">
-                    <h3>🔴 红灯预警</h3>
-                    <p>关键指标严重偏离正常范围，需要立即关注和行动</p>
-                </div>
-                <div class="rule-item">
-                    <h3>🟡 黄灯预警</h3>
-                    <p>指标出现异常信号，需要密切监控</p>
-                </div>
-                <div class="rule-item">
-                    <h3>🟢 绿灯状态</h3>
-                    <p>所有指标均在正常范围内，市场环境稳定</p>
+                <div class="monitoring-item">
+                    <h4>D04 就业与居民部门</h4>
+                    <p>状态: 正常 ✅</p>
+                    <p>关键指标: 失业率 4.3%</p>
                 </div>
             </div>
         </section>
@@ -134,7 +86,7 @@
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
+        <div class="footer-content">
             <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
             <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
