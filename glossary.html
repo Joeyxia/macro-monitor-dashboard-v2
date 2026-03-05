@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1>宏观经济监控仪表盘</h1>
+                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
                 <span class="version">v2 · 14维机构级模型</span>
             </div>
             <ul class="nav-menu">
@@ -25,65 +25,61 @@
         </div>
     </nav>
 
-    <!-- 主内容区域 -->
-    <main class="dashboard">
-        <section class="content-header">
-            <h2>📚 专业术语解释</h2>
-            <p>14维宏观监控模型中的专业概念详解</p>
-        </section>
-
-        <div class="info-box">
-            <strong>🔍 数据来源：</strong>美国财政部、BLS、美联储、NY Fed、Conference Board等官方机构
+    <!-- 术语解释主区域 -->
+    <main class="container">
+        <div class="section-title">📚 专业术语解释</div>
+        
+        <div class="glossary-section">
+            <h2>市场报告术语指南</h2>
+            <p>SOFR、ERP、MOVE、TGA余额、日元套利交易等专业概念详解</p>
+            
+            <div class="term-item">
+                <div class="term-name">SOFR (Secured Overnight Financing Rate)</div>
+                <div class="term-definition">有担保隔夜融资利率，是美国银行间以美国国债为抵押品的隔夜借贷利率，已取代LIBOR成为主要基准利率。</div>
+                <div class="term-source">数据来源: 纽约联储</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">ERP (Equity Risk Premium)</div>
+                <div class="term-definition">股权风险溢价，指股票市场预期回报率与无风险利率之间的差额，反映投资者对承担股票风险所要求的额外补偿。</div>
+                <div class="term-source">计算方式: S&P500远期收益率 - 10年期美债收益率</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">MOVE指数 (Merrill Lynch Option Volatility Estimate)</div>
+                <div class="term-definition">美银美林期权波动率估算指数，衡量美国国债期权的隐含波动率，是债券市场波动性的领先指标。</div>
+                <div class="term-source">数据来源: ICE Data Indices</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">TGA余额 (Treasury General Account)</div>
+                <div class="term-definition">美国财政部一般账户余额，反映财政部在美联储的现金储备，影响银行体系的准备金水平和流动性状况。</div>
+                <div class="term-source">数据来源: 美国财政部</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">日元套利交易 (Yen Carry Trade)</div>
+                <div class="term-definition">利用日元低利率优势，借入日元投资于高收益资产的交易策略，是全球风险偏好和流动性的重要指标。</div>
+                <div class="term-source">监测指标: 日元汇率、利差变化</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">10Y-3M利差 (10-Year minus 3-Month Treasury Yield Spread)</div>
+                <div class="term-definition">10年期与3个月期美国国债收益率之差，是预测经济衰退的重要领先指标，倒挂通常预示经济放缓。</div>
+                <div class="term-source">数据来源: 美国财政部</div>
+            </div>
+            
+            <div class="term-item">
+                <div class="term-name">VIX波动率指数 (CBOE Volatility Index)</div>
+                <div class="term-definition">芝加哥期权交易所波动率指数，衡量标普500指数期权的隐含波动率，被称为"恐慌指数"。</div>
+                <div class="term-source">数据来源: CBOE</div>
+            </div>
         </div>
-
-        <!-- 术语列表 -->
-        <section class="glossary-section">
-            <div class="glossary-item">
-                <h3>SOFR (Secured Overnight Financing Rate)</h3>
-                <p>有担保隔夜融资利率，是替代LIBOR的美国基准利率，反映银行间以美国国债为抵押品的隔夜借贷成本。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>10Y-3M利差</h3>
-                <p>10年期美国国债收益率与3个月期美国国债收益率之差，是重要的经济周期领先指标，倒挂通常预示经济衰退风险。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>VIX波动率指数</h3>
-                <p>芝加哥期权交易所波动率指数，衡量标普500指数期权的隐含波动率，被称为"恐慌指数"，数值越高表示市场恐慌情绪越强。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>ERP (Equity Risk Premium)</h3>
-                <p>股票风险溢价，指股票预期收益率与无风险利率（如10年期国债收益率）之差，反映投资者对股票风险的补偿要求。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>MOVE指数</h3>
-                <p>美林期权波动率估计指数，衡量美国国债期权的隐含波动率，反映债券市场对未来利率波动的预期。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>TGA余额</h3>
-                <p>美国财政部一般账户余额，反映政府现金储备水平，对市场流动性有重要影响。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>日元套利交易</h3>
-                <p>投资者借入低利率的日元，投资于高收益资产的交易策略，当风险偏好下降时容易引发平仓潮。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>QT (Quantitative Tightening)</h3>
-                <p>量化紧缩，指央行缩减资产负债表规模的货币政策操作，与量化宽松(QE)相反。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>产能利用率</h3>
-                <p>实际工业产出与潜在最大产出的比率，反映经济资源利用效率，是重要的周期性指标。</p>
-            </div>
-            <div class="glossary-item">
-                <h3>职位空缺数</h3>
-                <p>企业发布的未填补职位数量，反映劳动力市场需求状况，是就业市场的重要领先指标。</p>
-            </div>
-        </section>
     </main>
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container">
             <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
             <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
         </div>
