@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业术语解释 - 宏观经济监控仪表盘</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>宏观经济监控仪表盘</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">仪表盘</a></li>
+                <li><a href="reports/">日报</a></li>
+                <li><a href="#glossary" class="active">术语解释</a></li>
+                <li><a href="data-dashboard.html">数据看板</a></li>
+                <li><a href="ai-analysis.html">AI分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 术语解释主区域 -->
+    <main class="dashboard">
+        <section class="glossary-header">
+            <h2>📚 专业术语解释</h2>
+            <p>14维宏观监控模型指标详解</p>
+        </section>
+
+        <!-- 搜索和筛选 -->
+        <div class="glossary-controls">
+            <input type="text" id="searchTerm" placeholder="搜索术语..." class="search-input">
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">所有类别</option>
+                <option value="core-macro">Core Macro</option>
+                <option value="policy-external">Policy & External</option>
+                <option value="market-mapping">Market Mapping</option>
+                <option value="theme-panel">Theme Panel</option>
+                <option value="data-source">数据源</option>
+            </select>
+        </div>
+
+        <!-- 术语列表 -->
+        <div class="glossary-grid" id="glossaryGrid">
+            <!-- Core Macro 层级 -->
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D01 货币政策与流动性</h3>
+                <div class="term-weight">权重: 12%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 利率曲线、短端资金利率、央行资产负债表与净流动性。</p>
+                    <p><strong>关键指标</strong>: 10Y-3M利差、SOFR、美联储总资产、净流动性代理</p>
+                    <p><strong>更新频率</strong>: 日/周</p>
+                    <p><strong>数据源</strong>: FRED (H.15), NY Fed, FRED (H.4.1)</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D02 增长与前瞻</h3>
+                <div class="term-weight">权重: 11%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: GDP/PMI/订单/初请等前瞻增长信号。</p>
+                    <p><strong>关键指标</strong>: 实际GDP环比折年、制造业PMI、初请失业金4周均值、LEI同比</p>
+                    <p><strong>更新频率</strong>: 周/月/季</p>
+                    <p><strong>数据源</strong>: BEA, ISM/S&P, FRED, Conference Board</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D03 通胀与价格压力</h3>
+                <div class="term-weight">权重: 10%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 核心通胀与通胀预期，判断政策约束与利润压力。</p>
+                    <p><strong>关键指标</strong>: 核心CPI、核心PCE、5Y5Y通胀预期</p>
+                    <p><strong>更新频率</strong>: 月</p>
+                    <p><strong>数据源</strong>: BLS/FRED, BEA/FRED</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D04 就业与居民部门</h3>
+                <div class="term-weight">权重: 10%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 就业、收入与居民信用压力。</p>
+                    <p><strong>关键指标</strong>: 失业率、工资增速、信用卡拖欠率、实际可支配收入同比</p>
+                    <p><strong>更新频率</strong>: 月/季</p>
+                    <p><strong>数据源</strong>: BLS, FRED, NY Fed</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D05 企业盈利与信用</h3>
+                <div class="term-weight">权重: 8%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 盈利预期修正与信用利差/违约压力。</p>
+                    <p><strong>关键指标</strong>: 标普500 Forward P/E、EPS修正广度、HY OAS</p>
+                    <p><strong>更新频率</strong>: 日/周/月</p>
+                    <p><strong>数据源</strong>: Bloomberg, FRED, ICE</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D06 房地产与利率敏感部门</h3>
+                <div class="term-weight">权重: 6%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 按揭利率、成交与开工，反映利率传导。</p>
+                    <p><strong>关键指标</strong>: 30年按揭利率、成屋销售、新屋开工</p>
+                    <p><strong>更新频率</strong>: 周/月</p>
+                    <p><strong>数据源</strong>: Freddie Mac, NAR, Census Bureau</p>
+                </div>
+            </div>
+
+            <div class="glossary-item core-macro" data-category="core-macro">
+                <h3>D10 金融条件与信用传导</h3>
+                <div class="term-weight">权重: 6%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 金融条件指数、银行信贷供给与资金面压力。</p>
+                    <p><strong>关键指标</strong>: FCI、银行信贷增速、TED利差</p>
+                    <p><strong>更新频率</strong>: 周/月</p>
+                    <p><strong>数据源</strong>: Chicago Fed, FRED, ICE</p>
+                </div>
+            </div>
+
+            <!-- Policy & External 层级 -->
+            <div class="glossary-item policy-external" data-category="policy-external">
+                <h3>D08 外部部门与美元条件</h3>
+                <div class="term-weight">权重: 7%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: DXY/利差/资本流动等外部融资条件。</p>
+                    <p><strong>关键指标</strong>: DXY/REER、美日利差、海外净买入美国资产</p>
+                    <p><strong>更新频率</strong>: 周/月</p>
+                    <p><strong>数据源</strong>: FRED, Treasury, TIC</p>
+                </div>
+            </div>
+
+            <div class="glossary-item policy-external" data-category="policy-external">
+                <h3>D09 财政政策与债务约束</h3>
+                <div class="term-weight">权重: 8%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 赤字、利息负担与债务路径。</p>
+                    <p><strong>关键指标</strong>: 财政赤字/GDP、债务/GDP、利息支出/财政收入</p>
+                    <p><strong>更新频率</strong>: 月/季/年</p>
+                    <p><strong>数据源</strong>: Treasury, CBO, FRED</p>
+                </div>
+            </div>
+
+            <div class="glossary-item soft-data" data-category="policy-external">
+                <h3>D12 信心与不确定性</h3>
+                <div class="term-weight">权重: 6%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 消费者/企业信心与政策不确定性。</p>
+                    <p><strong>关键指标</strong>: 消费者信心、CEO Confidence、EPU</p>
+                    <p><strong>更新频率</strong>: 月/季</p>
+                    <p><strong>数据源</strong>: Conference Board, MNI, EPU Index</p>
+                </div>
+            </div>
+
+            <!-- Market Mapping 层级 -->
+            <div class="glossary-item market-mapping" data-category="market-mapping">
+                <h3>D07 风险偏好与跨资产波动</h3>
+                <div class="term-weight">权重: 6%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: VIX/MOVE/信用利差等市场风险映射。</p>
+                    <p><strong>关键指标</strong>: VIX、MOVE、3个月最大回撤</p>
+                    <p><strong>更新频率</strong>: 日/周</p>
+                    <p><strong>数据源</strong>: CBOE, ICE, Bloomberg</p>
+                </div>
+            </div>
+
+            <div class="glossary-item external-shock" data-category="market-mapping">
+                <h3>D11 大宗商品与能源/地缘风险</h3>
+                <div class="term-weight">权重: 5%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 油价/商品与地缘风险对通胀与增长的冲击。</p>
+                    <p><strong>关键指标</strong>: WTI、CRB同比、GPR指数</p>
+                    <p><strong>更新频率</strong>: 日/月</p>
+                    <p><strong>数据源</strong>: EIA, CRB, GPR Index</p>
+                </div>
+            </div>
+
+            <!-- Theme Panel 层级 -->
+            <div class="glossary-item theme-panel" data-category="theme-panel">
+                <h3>D13 AI资本开支周期（主题）</h3>
+                <div class="term-weight">权重: 4%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 云与AI资本开支/营收动能（不应喧宾夺主）。</p>
+                    <p><strong>关键指标</strong>: AI相关企业资本开支、云服务营收增长</p>
+                    <p><strong>更新频率</strong>: 季度</p>
+                    <p><strong>数据源</strong>: 公司财报、行业报告</p>
+                </div>
+            </div>
+
+            <div class="glossary-item theme-panel" data-category="theme-panel">
+                <h3>D14 加密与稳定币流动性（主题）</h3>
+                <div class="term-weight">权重: 1%</div>
+                <div class="term-definition">
+                    <p><strong>定义</strong>: 稳定币与链上流动性（低权重主题观察）。</p>
+                    <p><strong>关键指标</strong>: USDC流通量、BTC价格、链上交易量</p>
+                    <p><strong>更新频率</strong>: 日/周</p>
+                    <p><strong>数据源</strong>: CoinGecko, Circle, Blockchain explorers</p>
+                </div>
+            </div>
+
+            <!-- 数据源术语 -->
+            <div class="glossary-item data-source" data-category="data-source">
+                <h3>FRED (Federal Reserve Economic Data)</h3>
+                <div class="term-definition">
+                    <p><strong>描述</strong>: 美联储圣路易斯分行提供的经济数据平台</p>
+                    <p><strong>覆盖范围</strong>: 超过80万+经济数据系列，包括利率、GDP、就业、通胀等</p>
+                    <p><strong>API密钥</strong>: 178d0503a13dd75d0498a87a1406d1a0</p>
+                    <p><strong>访问地址</strong>: https://fred.stlouisfed.org/</p>
+                </div>
+            </div>
+
+            <div class="glossary-item data-source" data-category="data-source">
+                <h3>BEA (Bureau of Economic Analysis)</h3>
+                <div class="term-definition">
+                    <p><strong>描述</strong>: 美国经济分析局，负责GDP、PCE等官方经济数据</p>
+                    <p><strong>关键数据</strong>: 实际GDP、个人消费支出(PCE)、企业利润等</p>
+                    <p><strong>访问地址</strong>: https://www.bea.gov/</p>
+                </div>
+            </div>
+
+            <div class="glossary-item data-source" data-category="data-source">
+                <h3>BLS (Bureau of Labor Statistics)</h3>
+                <div class="term-definition">
+                    <p><strong>描述</strong>: 美国劳工统计局，负责CPI、就业等劳动力市场数据</p>
+                    <p><strong>关键数据</strong>: 消费者物价指数(CPI)、失业率、工资数据等</p>
+                    <p><strong>访问地址</strong>: https://www.bls.gov/</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 投资信号解读 -->
+        <section class="signal-guide">
+            <h3>📊 投资信号解读指南</h3>
+            <div class="signal-explanation">
+                <div class="signal-item bullish">
+                    <h4>≥70分 - 强烈看多</h4>
+                    <p>经济环境强劲，货币政策宽松，风险偏好高，适合积极投资策略。</p>
+                </div>
+                <div class="signal-item neutral-high">
+                    <h4>60-69分 - 温和看多</h4>
+                    <p>经济基本面稳健，但存在一些不确定性，适合平衡型投资策略。</p>
+                </div>
+                <div class="signal-item neutral">
+                    <h4>40-59分 - 中性</h4>
+                    <p>经济环境复杂，多空因素交织，适合防御性投资策略。</p>
+                </div>
+                <div class="signal-item neutral-low">
+                    <h4>30-39分 - 温和看空</h4>
+                    <p>经济面临下行压力，风险偏好降低，适合保守型投资策略。</p>
+                </div>
+                <div class="signal-item bearish">
+                    <h4>≤29分 - 强烈看空</h4>
+                    <p>经济衰退风险高，市场恐慌情绪浓重，适合现金为王策略。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 宏观经济监控仪表盘 | 基于14维机构级宏观监控模型</p>
+            <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board 等官方机构</p>
+        </div>
+    </footer>
+
+    <script src="glossary.js"></script>
+</body>
+</html>
