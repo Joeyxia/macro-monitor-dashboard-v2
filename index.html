@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
+                <h1>宏观经济监控仪表盘</h1>
                 <span class="version">v2 · 14维机构级模型</span>
             </div>
             <ul class="nav-menu">
@@ -21,6 +21,7 @@
                 <li><a href="reports/">日报</a></li>
                 <li><a href="glossary.html">术语解释</a></li>
                 <li><a href="data-dashboard.html">数据看板</a></li>
+                <li><a href="alerts.html">预警信号</a></li>
                 <li><a href="ai-analysis.html">AI分析</a></li>
             </ul>
         </div>
@@ -28,8 +29,8 @@
 
     <!-- 主仪表盘区域 -->
     <main class="dashboard">
-        <!-- 综合评分卡片 -->
-        <section class="score-card">
+        <!-- 综合评分与报告摘要卡片 -->
+        <section class="score-report-card">
             <div class="score-header">
                 <h2>综合评分</h2>
                 <span class="last-updated">最后更新: 2026-03-05 15:45</span>
@@ -39,6 +40,9 @@
             </div>
             <div class="score-status">
                 <span class="status-neutral">中性偏多</span>
+            </div>
+            <div class="report-summary">
+                <p>今日综合评分为58.6分，维持中性偏多观点。10Y-3M利差已转正至+34bps，倒挂信号显著弱化，货币政策环境有所改善。但通胀压力仍存，房地产市场继续承压。</p>
             </div>
             <div class="score-details">
                 <div class="detail-item">
@@ -88,7 +92,7 @@
             <h2>14维宏观监控模型</h2>
             <div class="model-layers">
                 <div class="layer core-macro">
-                    <h3><i class="fas fa-layer-group"></i> Core Macro 层级 (70%)</h3>
+                    <h3>Core Macro 层级 (70%)</h3>
                     <div class="dimensions-grid">
                         <div class="dimension-card" data-dimension="D01">
                             <div class="dimension-header">
@@ -164,7 +168,7 @@
                 </div>
 
                 <div class="layer policy-external">
-                    <h3><i class="fas fa-globe-americas"></i> Policy & External 层级 (21%)</h3>
+                    <h3>Policy & External 层级 (21%)</h3>
                     <div class="dimensions-grid">
                         <div class="dimension-card" data-dimension="D08">
                             <div class="dimension-header">
@@ -200,7 +204,7 @@
                 </div>
 
                 <div class="layer market-mapping">
-                    <h3><i class="fas fa-exchange-alt"></i> Market Mapping 层级 (11%)</h3>
+                    <h3>Market Mapping 层级 (11%)</h3>
                     <div class="dimensions-grid">
                         <div class="dimension-card" data-dimension="D07">
                             <div class="dimension-header">
@@ -226,7 +230,7 @@
                 </div>
 
                 <div class="layer theme-panel">
-                    <h3><i class="fas fa-lightbulb"></i> Theme Panel 层级 (5%)</h3>
+                    <h3>Theme Panel 层级 (5%)</h3>
                     <div class="dimensions-grid">
                         <div class="dimension-card" data-dimension="D13">
                             <div class="dimension-header">
@@ -250,29 +254,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- 预警信号 -->
-        <section class="alerts-section">
-            <h2>预警信号监控</h2>
-            <div class="alerts-container">
-                <div class="alert-card green">
-                    <i class="fas fa-check-circle"></i>
-                    <div class="alert-content">
-                        <h4>无预警信号</h4>
-                        <p>当前所有维度均在正常范围内运行</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 最新报告摘要 -->
-        <section class="latest-report">
-            <h2>最新报告摘要</h2>
-            <div class="report-summary">
-                <p>今日综合评分为58.6分，维持中性偏多观点。10Y-3M利差已转正至+34bps，倒挂信号显著弱化，货币政策环境有所改善。但通胀压力仍存，房地产市场继续承压。</p>
-                <a href="reports/latest.html" class="read-full-report">阅读完整报告 →</a>
             </div>
         </section>
     </main>
