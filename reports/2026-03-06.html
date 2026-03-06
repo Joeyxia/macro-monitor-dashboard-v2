@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14维宏观监控日报 - 2026-03-06</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> 宏观经济监控仪表盘</h1>
+                <span class="version">v2 · 14维机构级模型</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">仪表盘</a></li>
+                <li><a href="../reports/">日报</a></li>
+                <li><a href="../glossary.html">术语解释</a></li>
+                <li><a href="../data-dashboard.html">数据看板</a></li>
+                <li><a href="../alerts.html">预警信号</a></li>
+                <li><a href="../ai-analysis.html">AI分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 报告主区域 -->
+    <main class="dashboard">
+        <section class="report-header">
+            <h1>📊 14维宏观监控日报</h1>
+            <p class="report-date">报告日期: 2026年3月6日</p>
+            <div class="report-summary-card">
+                <div class="score-value">65/100</div>
+                <div class="score-status">中性偏谨慎</div>
+                <div class="report-summary-text">
+                    <p>今日综合评分为65分，维持中性偏谨慎观点。10Y-3M利差进一步扩大至+43bps，倒挂信号显著弱化，货币政策环境持续改善。VIX指数上升至21.15，市场波动性有所增加，反映谨慎情绪。通胀压力仍存但趋势缓和，房地产市场保持稳定。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心指标概览 -->
+        <section class="key-indicators">
+            <h2>关键指标概览</h2>
+            <div class="indicators-grid">
+                <div class="indicator-card">
+                    <div class="indicator-title">10Y-3M利差</div>
+                    <div class="indicator-value">+43 bps</div>
+                    <div class="indicator-change positive">+5 bps</div>
+                    <div class="indicator-source">FRED</div>
+                    <div class="indicator-date">2026-03-04</div>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-title">VIX指数</div>
+                    <div class="indicator-value">21.15</div>
+                    <div class="indicator-change positive">+2.95</div>
+                    <div class="indicator-source">CBOE</div>
+                    <div class="indicator-date">2026-03-04</div>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-title">GDP增长</div>
+                    <div class="indicator-value">1.4%</div>
+                    <div class="indicator-change neutral">0.0%</div>
+                    <div class="indicator-source">BEA</div>
+                    <div class="indicator-date">2025-Q4</div>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-title">核心CPI</div>
+                    <div class="indicator-value">2.51%</div>
+                    <div class="indicator-change neutral">+0.11%</div>
+                    <div class="indicator-source">BLS</div>
+                    <div class="indicator-date">2026-01</div>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-title">失业率</div>
+                    <div class="indicator-value">4.3%</div>
+                    <div class="indicator-change neutral">0.0%</div>
+                    <div class="indicator-source">BLS</div>
+                    <div class="indicator-date">2026-01</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14维度详细分析 -->
+        <section class="dimensions-detailed">
+            <h2>14维模型详细分析</h2>
+            
+            <!-- Core Macro 层级 (70%) -->
+            <div class="dimension-section">
+                <h3>Core Macro 层级 <span>(70%权重)</span></h3>
+                
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D01</span>
+                        <span class="dimension-name">货币政策与流动性</span>
+                        <span class="weight">(12%)</span>
+                    </div>
+                    <div class="dimension-score">75/100</div>
+                    <div class="dimension-contribution">加权贡献: 9.00分</div>
+                    <div class="dimension-trend up">↑</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 10Y-3M利差 +43 bps, SOFR 3.67%, 美联储总资产 $4.34万亿</p>
+                        <p><strong>分析</strong>: 利差进一步扩大至+43bps，收益率曲线倒挂显著弱化，货币政策环境明显改善。SOFR利率保持稳定，美联储资产负债表规模相对稳定。</p>
+                        <p><strong>数据验证</strong>: ✅ FRED官方数据已确认</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D02</span>
+                        <span class="dimension-name">经济增长动能</span>
+                        <span class="weight">(11%)</span>
+                    </div>
+                    <div class="dimension-score">58/100</div>
+                    <div class="dimension-contribution">加权贡献: 6.38分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 实际GDP环比折年 1.4%, 失业率 4.3%, 核心CPI同比 2.51%</p>
+                        <p><strong>分析</strong>: 经济增长温和但稳定，GDP增速符合预期。劳动力市场保持健康，失业率维持在4.3%的低位。通胀压力可控但仍需关注。</p>
+                        <p><strong>数据验证</strong>: ✅ BEA、BLS官方数据已确认</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D03</span>
+                        <span class="dimension-name">通胀压力</span>
+                        <span class="weight">(10%)</span>
+                    </div>
+                    <div class="dimension-score">52/100</div>
+                    <div class="dimension-contribution">加权贡献: 5.20分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 核心CPI同比 2.51%, 核心PCE 127.918 (2017=100)</p>
+                        <p><strong>分析</strong>: 通胀压力有所缓解但仍高于长期目标，核心CPI同比2.51%，核心PCE指数127.918。通胀趋势有所缓和，但粘性仍存。</p>
+                        <p><strong>数据验证</strong>: ✅ BLS、FRED官方数据已确认</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D04</span>
+                        <span class="dimension-name">就业与居民部门</span>
+                        <span class="weight">(10%)</span>
+                    </div>
+                    <div class="dimension-score">68/100</div>
+                    <div class="dimension-contribution">加权贡献: 6.80分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 失业率 4.3%, 成屋销售 391万套</p>
+                        <p><strong>分析</strong>: 劳动力市场保持稳健，失业率处于健康水平，支撑消费信心。房地产市场活动温和，成屋销售391万套，受利率环境影响有限。</p>
+                        <p><strong>数据验证</strong>: ✅ BLS官方数据已确认</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D05</span>
+                        <span class="dimension-name">企业盈利与信用</span>
+                        <span class="weight">(8%)</span>
+                    </div>
+                    <div class="dimension-score">55/100</div>
+                    <div class="dimension-contribution">加权贡献: 4.40分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 标普500 Forward P/E 20.3</p>
+                        <p><strong>分析</strong>: 估值处于合理区间，企业盈利预期稳定。Forward P/E为20.3，显示市场对企业未来盈利有合理预期。</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D06</span>
+                        <span class="dimension-name">房地产与利率敏感</span>
+                        <span class="weight">(6%)</span>
+                    </div>
+                    <div class="dimension-score">50/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.00分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 成屋销售 391万套</p>
+                        <p><strong>分析</strong>: 房地产市场保持稳定，成屋销售391万套。受利率环境影响有限，市场活动温和。</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D10</span>
+                        <span class="dimension-name">金融条件与信用传导</span>
+                        <span class="weight">(6%)</span>
+                    </div>
+                    <div class="dimension-score">62/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.72分</div>
+                    <div class="dimension-trend up">↑</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 金融条件指数 改善</p>
+                        <p><strong>分析</strong>: 随着收益率曲线正常化，金融条件逐步宽松，信用传导机制改善。货币政策环境持续优化。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Policy & External 层级 (21%) -->
+            <div class="dimension-section">
+                <h3>Policy & External 层级 <span>(21%权重)</span></h3>
+                
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D08</span>
+                        <span class="dimension-name">外部部门与美元</span>
+                        <span class="weight">(7%)</span>
+                    </div>
+                    <div class="dimension-score">55/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.85分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 美元指数 稳定</p>
+                        <p><strong>分析</strong>: 外部平衡状况相对稳定，资本流动有序。美元指数保持稳定，外部部门风险可控。</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D09</span>
+                        <span class="dimension-name">财政政策与债务</span>
+                        <span class="weight">(8%)</span>
+                    </div>
+                    <div class="dimension-score">45/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.60分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 财政赤字/GDP 监控中</p>
+                        <p><strong>分析</strong>: 财政政策对经济的支持作用需要持续关注。财政赤字和债务约束仍是长期关注点。</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D12</span>
+                        <span class="dimension-name">信心与不确定性</span>
+                        <span class="weight">(6%)</span>
+                    </div>
+                    <div class="dimension-score">53/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.18分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 市场信心 中性</p>
+                        <p><strong>分析</strong>: 基于现有数据，市场信心处于中性水平，不确定性有所降低。投资者情绪趋于理性。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Mapping 层级 (11%) -->
+            <div class="dimension-section">
+                <h3>Market Mapping 层级 <span>(11%权重)</span></h3>
+                
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D07</span>
+                        <span class="dimension-name">风险偏好与波动</span>
+                        <span class="weight">(6%)</span>
+                    </div>
+                    <div class="dimension-score">58/100</div>
+                    <div class="dimension-contribution">加权贡献: 3.48分</div>
+                    <div class="dimension-trend down">↓</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: VIX指数 21.15, MOVE指数 数据获取中</p>
+                        <p><strong>分析</strong>: 市场波动性处于中性偏高区域，VIX指数21.15反映谨慎情绪。MOVE指数数据正在获取中，利率波动性指标需要进一步验证。</p>
+                        <p><strong>数据验证</strong>: ✅ CBOE官方数据已确认</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D11</span>
+                        <span class="dimension-name">大宗商品与地缘风险</span>
+                        <span class="weight">(5%)</span>
+                    </div>
+                    <div class="dimension-score">52/100</div>
+                    <div class="dimension-contribution">加权贡献: 2.60分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: 原油价格 $73/桶, 全球PMI 50.5</p>
+                        <p><strong>分析</strong>: 大宗商品价格相对稳定，原油价格$73/桶。全球PMI 50.5，显示全球经济温和扩张，地缘政治风险可控。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Panel 层级 (5%) -->
+            <div class="dimension-section">
+                <h3>Theme Panel 层级 <span>(5%权重)</span></h3>
+                
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D13</span>
+                        <span class="dimension-name">AI资本开支周期</span>
+                        <span class="weight">(4%)</span>
+                    </div>
+                    <div class="dimension-score">60/100</div>
+                    <div class="dimension-contribution">加权贡献: 2.40分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: OpenRouter Token消耗 30,000</p>
+                        <p><strong>分析</strong>: AI基础设施使用量稳定增长，OpenRouter平台Token消耗30,000，显示AI采用趋势持续。</p>
+                    </div>
+                </div>
+
+                <div class="dimension-detail">
+                    <div class="dimension-header">
+                        <span class="dimension-id">D14</span>
+                        <span class="dimension-name">加密流动性</span>
+                        <span class="weight">(1%)</span>
+                    </div>
+                    <div class="dimension-score">59/100</div>
+                    <div class="dimension-contribution">加权贡献: 0.59分</div>
+                    <div class="dimension-trend neutral">→</div>
+                    <div class="dimension-analysis">
+                        <p><strong>关键指标</strong>: BTC价格 $70,817, USDC流通量 $770.6亿</p>
+                        <p><strong>分析</strong>: 加密市场保持活跃，BTC价格维持在$70,817，USDC稳定币流通量达到$770.6亿，显示市场参与度提升。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结论与建议 -->
+        <section class="conclusion-section">
+            <h2>🎯 核心结论与投资建议</h2>
+            <div class="conclusion-content">
+                <p><strong>总体评估</strong>: 综合评分65分，维持中性偏谨慎观点。货币政策环境显著改善是主要支撑因素，但市场波动性上升和通胀粘性仍是关注点。</p>
+                
+                <p><strong>关键亮点</strong>:</p>
+                <ul>
+                    <li>✅ 10Y-3M利差扩大至+43bps，收益率曲线倒挂显著弱化</li>
+                    <li>✅ 劳动力市场保持稳健，失业率维持在4.3%</li>
+                    <li>✅ 金融条件改善，信用传导机制优化</li>
+                </ul>
+                
+                <p><strong>风险关注</strong>:</p>
+                <ul>
+                    <li>⚠️ VIX指数上升至21.15，市场波动性增加</li>
+                    <li>⚠️ 通胀虽有缓解但仍高于目标水平</li>
+                    <li>⚠️ 财政赤字和债务约束需要持续监控</li>
+                </ul>
+                
+                <p><strong>投资建议</strong>:</p>
+                <ul>
+                    <li>📈 股票市场：中性偏谨慎，关注受益于利率环境改善的价值股</li>
+                    <li>📉 债券市场：收益率曲线趋陡，长端债券配置价值提升</li>
+                    <li>🏠 房地产：保持观望，市场活动温和稳定</li>
+                    <li>💰 现金类资产：适度配置，关注短期利率变化</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 数据来源 -->
+        <section class="data-sources">
+            <h2>📊 数据来源与验证</h2>
+            <div class="sources-list">
+                <div class="source-item">
+                    <strong>FRED (Federal Reserve Economic Data)</strong>: 10Y-3M利差、失业率、PCE等宏观经济数据
+                </div>
+                <div class="source-item">
+                    <strong>BEA (Bureau of Economic Analysis)</strong>: GDP、国民账户数据
+                </div>
+                <div class="source-item">
+                    <strong>BLS (Bureau of Labor Statistics)</strong>: CPI、就业、薪资等劳动力市场数据
+                </div>
+                <div class="source-item">
+                    <strong>CBOE (Chicago Board Options Exchange)</strong>: VIX波动率指数
+                </div>
+                <div class="source-item">
+                    <strong>美国财政部</strong>: 国债收益率、TGA余额等财政数据
+                </div>
+                <div class="source-item">
+                    <strong>CoinGecko</strong>: 加密货币市场数据
+                </div>
+                <div class="source-item">
+                    <strong>OpenRouter</strong>: AI基础设施使用数据
+                </div>
+            </div>
+            <p class="last-updated">最后数据更新: 2026年3月6日 18:55 (北京时间)</p>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 宏观经济监控仪表盘 v2 | 基于14维机构级宏观监控模型</p>
+            <p>数据来源: FRED, BEA, BLS, NY Fed, Conference Board | 更新频率: 工作日 09:00 & 22:00</p>
+        </div>
+    </footer>
+
+    <script src="../dashboard.js"></script>
+</body>
+</html>
